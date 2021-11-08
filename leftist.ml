@@ -9,9 +9,6 @@ and 'a queue =
 
 exception Empty;;
 
-let isQbeforeX q x = match q with
-    | Leaf -> false
-    | Node({left_s=_;right_s=_;value=y;depth=_}) -> y <= x;;
 let swich q1 q2 = match q1 with
     | Leaf -> q2,q1
     | Node({left_s=_;right_s=_;value=x;depth=_}) -> match q2 with 
