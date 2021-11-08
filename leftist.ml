@@ -17,8 +17,6 @@ let swich q1 q2 = match q1 with
     | Node({left_s=_;right_s=_;value=x;depth=_}) -> match q2 with 
         | Leaf ->q1,q2
         | Node({left_s=_;right_s=_;value=y;depth=_}) -> if x<=y then q1,q2 else q2,q1;;
-(*                                                      if isQbeforeX q2 isQafterX
-            then q2,q1 else q1,q2;;*)
 
 let read_depth q = match q with
     | Leaf -> 0
